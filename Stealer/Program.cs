@@ -1,10 +1,18 @@
-﻿namespace Stealer
-{
-    internal class Program
+﻿using System.ComponentModel;
+using System.Reflection;
+using System.Text;
+
+namespace Stealer;
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Spy spy = new Spy();
+            var result = Spy.StealFieldInfo("Stealer.Hacker", "username", "password");
+            Console.WriteLine(result);
         }
+
+       
+        
     }
-}
